@@ -2,7 +2,7 @@ title: USAB Section 508 KMS
 email: 508@access-board.gov
 description:
   ICT Team Knowledge Management System
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/ict" # the subpath of your site, e.g. /blog
 url: "https://508kms.access-board.gov"
 
 # Twitter handle. Only the handle, not the URL.
@@ -85,7 +85,7 @@ defaults:
       layout: universal
       image-directory: /images/
       toc: /toc/ict.html
-      #toc-group: baselines
+      toc-group: ict
       right-sidenav: sidenav-right-universal.html
       #ta-text: Contact the Access Board for guidance on these Baseline tests
       #ta-email-pre: ta
