@@ -2,7 +2,7 @@ title: USAB Section 508 KMS
 email: 508@access-board.gov
 description:
   ICT Team Knowledge Management System
-baseurl: "/ict" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://508kms.access-board.gov"
 
 # Twitter handle. Only the handle, not the URL.
@@ -80,7 +80,7 @@ defaults:
       path: ""
       type: "ict"
     values:
-      banner-title: "USAB Section 508 KMS"
+      banner-title: "ICT KMS"
       collection-folder: ict
       layout: universal
       image-directory: /images/
@@ -142,7 +142,7 @@ pagination:
   extension: html
   # Optional, the default name of the index file for generated pages (e.g. 'index.html')
   # Without file extension
-  indexpage: "index.html"
+  indexpage: "ict-single.html"
 
 exclude:
   - package.json
