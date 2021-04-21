@@ -1,60 +1,61 @@
-title: Section 508 ICT Testing Baseline
+title: USAB Section 508 KMS
 email: ictbaseline@gsa.gov
 description: >-
-  The tests included in the Section 508 ICT Testing Baseline reduce ambiguity, 
-  increase consistency of results, and emphasize testing of the methods and 
-  techniques that can reliably meet the Section 508 ICT Accessibility requirements, 
-  given the current state and compatibility of underlying technologies.
+  ICT Team Knowledge Management System
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.access-board.gov"
+url: "https://508kms.access-board.gov"
 
 # Twitter handle. Only the handle, not the URL.
-twitter: AccessBoard
+# twitter: AccessBoard
 
 # Configuration for Google Analytics, add your UA code here:
-google_analytics_ua: UA-33523145-1
+# google_analytics_ua: UA-33523145-1
 
 # Digital Analytics Program (DAP) configuration
-dap:
- agency: U.S. Access Board
+#dap:
+# agency: U.S. Access Board
 
 # Site Navigation
 primary_navigation:
-  - name: About
-    url: https://www.access-board.gov/about/
-  - name: News
-    url: https://www.access-board.gov/news/
-  - name: Guidelines & Standards
-    url: https://www.access-board.gov/gs/
-    children:
-      - name: ICT (§508 and §255)
-        url: https://www.access-board.gov/ict/
-      - name: Americans with Disabilities Act
-        url: https://www.access-board.gov/ada/
-      - name: Architectural Barriers Act
-        url: https://www.access-board.gov/aba/
-      - name: Transportation Vehicles
-        url: https://www.access-board.gov/ada/vehicles/
-      - name: Public Rights-of-Way
-        url: https://www.access-board.gov/prowag/
-      - name: Passenger Vessels
-        url: https://www.access-board.gov/pvag/
-      - name: Medical Diagnostic Equipment
-        url: https://www.access-board.gov/mde/
-      - name: Prescription Drug Labels
-        url: https://www.access-board.gov/rx.html
-  - name: Training & Webinars
-    url: https://www.access-board.gov/webinars/
-  - name: File an ABA Complaint
-    url: https://www.access-board.gov/enforcement/
-  - name: Research
-    url: https://www.access-board.gov/research/
-  - name: Contact Us
-    url: https://www.access-board.gov/contact/
+  #- name: About
+  #  url: https://www.access-board.gov/about/
+  #- name: News
+  #  url: https://www.access-board.gov/news/
+  #- name: Guidelines & Standards
+  #  url: https://www.access-board.gov/gs/
+  #  children:
+  - name: USAB ICT (§508 and §255)
+    url: https://www.access-board.gov/ict/
+  - name: Comparison Table of WCAG 2.0 to Original 508 Standards
+    url: https://www.access-board.gov/ict/wcag2ict.html
+  - name: WCAG to FPC mapping
+    url: https://www.access-board.gov/ict/wcagtofpc.html
+  #    - name: Americans with Disabilities Act
+  #      url: https://www.access-board.gov/ada/
+  #    - name: Architectural Barriers Act
+  #      url: https://www.access-board.gov/aba/
+  #    - name: Transportation Vehicles
+  #      url: https://www.access-board.gov/ada/vehicles/
+  #    - name: Public Rights-of-Way
+  #      url: https://www.access-board.gov/prowag/
+  #    - name: Passenger Vessels
+  #      url: https://www.access-board.gov/pvag/
+  #    - name: Medical Diagnostic Equipment
+  #      url: https://www.access-board.gov/mde/
+  #    - name: Prescription Drug Labels
+  #      url: https://www.access-board.gov/rx.html
+  #- name: Training & Webinars
+  #  url: https://www.access-board.gov/webinars/
+  #- name: File an ABA Complaint
+  #  url: https://www.access-board.gov/enforcement/
+  #- name: Research
+  #  url: https://www.access-board.gov/research/
+  #- name: Contact Us
+  #  url: https://www.access-board.gov/contact/
 
-secondary_navigation:
-  - name: En Español
-    url: https://www.access-board.gov/es/
+#secondary_navigation:
+#  - name: En Español
+#    url: https://www.access-board.gov/es/
 
 # Search.gov configuration
 # 1. Create an account with Search.gov https://search.usa.gov/signup
@@ -67,7 +68,8 @@ searchgov:
   inline: true #this renders the results on the same domain. Otherwise, it will render the results in the search.gov domain
 
 collections:
-  baselines:
+  #baselines:
+  ict:
     output: true
     permalink: /:path/
 
@@ -76,17 +78,17 @@ permalink: pretty
 defaults:
   - scope:
       path: ""
-      type: "baselines"
+      type: "ict"
     values:
-      banner-title: "Section 508 ICT Testing Baseline"
-      collection-folder: baselines
+      banner-title: "USAB Section 508 KMS"
+      collection-folder: ict
       layout: universal
       image-directory: /images/
-      toc: /toc/auto.html
-      toc-group: baselines
+      toc: /toc/ict.html
+      #toc-group: baselines
       right-sidenav: sidenav-right-universal.html
-      ta-text: Contact the Access Board for guidance on these Baseline tests
-      ta-email-pre: ta
+      #ta-text: Contact the Access Board for guidance on these Baseline tests
+      #ta-email-pre: ta
 
 future: true
 
