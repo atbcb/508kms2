@@ -1,6 +1,6 @@
 title: USAB Section 508 KMS
-email: ictbaseline@gsa.gov
-description: >-
+email: 508@access-board.gov
+description:
   ICT Team Knowledge Management System
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://508kms.access-board.gov"
