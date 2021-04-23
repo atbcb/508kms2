@@ -86,7 +86,7 @@ defaults:
       collection-folder: ict
       layout: universal
       image-directory: /images/
-      toc: /toc/ict.html
+      toc: /toc/508kms.html
       toc-group: ict
       right-sidenav: sidenav-right-universal.html
       #ta-text: Contact the Access Board for guidance on these Baseline tests

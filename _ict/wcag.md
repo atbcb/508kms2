@@ -1,7 +1,6 @@
 ---
 title: FAQs
 version: original
-file: /files/ict/ict-final-rule.pdf
 ---
 ### Other FAQs
 #### WCAG
