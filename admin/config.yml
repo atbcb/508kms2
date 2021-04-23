@@ -1,0 +1,441 @@
+## Comment out when doing local development
+backend:
+  name: github
+  repo: kengdoj/508kms2
+  base_url: https://federalistapp.18f.gov
+  auth_endpoint: external/auth/github
+  preview_context: federalist/build
+  branch: staging
+  use_graphql: false
+
+##
+## Uncomment when doing local development on Netlify CMS
+## Run `npx netlify-cms-proxy-server` to start working locally
+## In another terminal, start the app with `npm start`
+## See https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+##
+
+# backend:
+#   name: git-gateway
+# local_backend: true
+
+##
+##
+
+media_folder: /images/uploads
+public_folder: /images/uploads
+publish_mode: editorial_workflow
+logo_url: /images/usab-seal.png
+
+
+collections:
+  - label: News
+    name: posts
+    folder: news/_posts/
+    create: true
+    slug: "{{date}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          dateFormat: "MMMM D, YYYY",
+          timeFormat: false,
+        }
+      - { label: "Excerpt", name: "excerpt", widget: "string", required: true }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          allow_multiple: false,
+          required: false,
+        }
+      - {
+          label: "Image Alternative Text",
+          name: "image_alt_text",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Authors (USAB staff)",
+          name: "authors",
+          widget: "relation",
+          collection: "staff",
+          searchFields: ["first_name", "last_name", "full_name"],
+          valueField: "name",
+          displayFields: ["name"],
+          multiple: true,
+          required: false,
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "relation",
+          collection: "tags",
+          searchFields: ["name"],
+          valueField: "name",
+          displayFields: ["name"],
+          multiple: true,
+          required: false
+        }
+      - {label: "Featured News", name: "featured", widget: "boolean", default: false}
+      - { label: "Body", name: "body", widget: "markdown" }
+  - label: Webinars
+    name: webinars
+    folder: webinars/_posts/
+    create: true
+    slug: "{{date}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Webinar Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          dateFormat: "MMMM D, YYYY",
+          timeFormat: false,
+        }
+      - { label: "Excerpt", name: "excerpt", widget: "string", required: true }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          allow_multiple: false,
+          required: false,
+        }
+      - {
+          label: "Image Alternative Text",
+          name: "image_alt_text",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Presenters (USAB staff)",
+          name: "presenters",
+          widget: "relation",
+          collection: "staff",
+          searchFields: ["first_name", "last_name", "full_name"],
+          valueField: "name",
+          displayFields: ["name"],
+          multiple: true,
+          required: false,
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "relation",
+          collection: "tags",
+          searchFields: ["name"],
+          valueField: "name",
+          displayFields: ["name"],
+          multiple: true,
+          required: false
+        }
+      - {
+          label: "Closed or Private Training",
+          name: "closed",
+          widget: "boolean",
+          default: false,
+          hint: "Is this a training for a specific group that is not open to the public?"
+        }
+      - {
+          label: "Webinar Start Time",
+          name: "webinar-start",
+          widget: "datetime",
+          format: "LLL",
+          timeFormat: "hh:mm a",
+          default: '',
+          required: false,
+        }
+      - {
+          label: "Webinar End Time",
+          name: "webinar-end",
+          widget: "datetime",
+          format: "LLL",
+          timeFormat: "hh:mm a",
+          required: false,
+        }
+      - {
+          label: "Registration Link",
+          name: "registration-link",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Recorded webinar video Link",
+          name: "video-link",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          name: "webinar",
+          widget: "hidden",
+          default: true
+        }
+  - label: Board Members
+    name: board-members
+    folder: _board-members/
+    create: true
+    slug: "{{name}}"
+    editor:
+      preview: false
+    fields:
+      - {
+          label: "Name",
+          name: "name",
+          widget: "string",
+          hint: 'This is the first name and last name appended with a hyphen in lowercase. ie("george-washington")',
+          required: true,
+        }
+      - {
+          label: "Last Name",
+          name: "last-name",
+          widget: "string",
+          hint: 'Just the last name for alphabetical sorting purposes, example "washington")',
+          required: true,
+        }
+      - {
+          label: "Full Name with titles and salutations",
+          name: "full_name",
+          widget: "string",
+          hint: 'Pres. George Washington, PhD',
+          required: true,
+        }
+      - {
+          label: "Chairperson",
+          name: "chair",
+          widget: "boolean",
+          default: false,
+          required: true,
+          hint: "If yes, Click to slide right",
+        }
+      - {
+          label: "Vice-Chairperson",
+          name: "vice-chair",
+          widget: "boolean",
+          default: false,
+          required: true,
+          hint: "If yes, Click to slide right",
+        }
+      - {
+          label: "Public/Federal Member",
+          name: "member",
+          widget: "select",
+          options: ["public", "federal"],
+          required: true,
+        }
+      - {
+          label: "Status",
+          name: "status",
+          widget: "select",
+          options: ["current", "former"],
+          required: true,
+          hint: "Is this a current or former board member?",
+        }
+      - {
+          label: "Appointing Presidential Administration",
+          name: "president",
+          widget: "select",
+          options: ["Biden", "Trump", "Obama", "Bush", "Clinton", "HW Bush", "Reagan", "Carter"],
+          required: false,
+          hint: "Which administration appointed this board member?",
+        }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          allow_multiple: false,
+          required: false,
+        }
+      - {
+        label: "Job Title",
+        name: "job-title",
+        widget: "text",
+        required: false
+        }
+      - {
+        label: "Department",
+        name: "department",
+        widget: "select",
+        options: [General Services Administration, Department of Defense, Department of Justice, Department of Housing and Urban Development, Department of Health and Human Services, United States Postal Service, Department of Labor, Department of Education, Department of Commerce, Department of the Interior, Department of Transportation, Department of Veterans Affairs],
+        required: false
+        }
+      - { label: "Bio", name: "body", widget: "markdown", required: false }
+  - label: Staff
+    name: staff
+    folder: _staff/
+    create: true
+    slug: "{{name}}"
+    editor:
+      preview: false
+    fields:
+      - {
+          label: "Name",
+          name: "name",
+          widget: "string",
+          hint: 'This is the first name and last name appended with a hyphen in lowercase. ie("jane-doe")',
+        }
+      - { label: "First Name", name: "first_name", widget: "string" }
+      - { label: "Last Name", name: "last_name", widget: "string" }
+      - { label: "Full Name", name: "full_name", widget: "string" }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          allow_multiple: false,
+          required: false,
+        }
+      - { label: "Job Title", name: "job-title", widget: "string", required: false }
+      - { label: "Office", name: "office", widget: "string", required: false }
+      - { label: "Agency", name: "agency", widget: "string", default: "United States Access Board", required: false }
+      - { label: "Bio", name: "body", widget: "markdown", required: false }
+  - label: 504 contacts
+    name: contacts-504
+    folder: _contacts-504/
+    create: true
+    slug: "{{name}}"
+    editor:
+      preview: false
+    fields:
+      - {
+          label: "unique agency name",
+          name: "name",
+          widget: "string",
+          hint: 'This is the abbreviated name of the agency with hyphens and in lowercase. ie("doj, hhs, hud")',
+        }
+      - {
+          label: "Full Agency Name",
+          name: "full_name",
+          widget: "string",
+          hint: 'Ex. Department of Health and Human Services',
+        }
+      - {
+        label: "504 contact name",
+        name: "contact",
+        widget: "string",
+        default: "",
+        required: false,
+        hint: 'Ex. George Washington',
+        }
+      - {
+        label: "504 contact Job Title",
+        name: "job-title",
+        widget: "string",
+        default: "",
+        required: false,
+        hint: 'Ex. Director',
+        }
+      - {
+        label: "Department",
+        name: "department",
+        widget: "string",
+        default: "",
+        required: false,
+        hint: 'Ex. Office of Equal Opportunity',
+        }
+      - {
+        label: "504 contact Email address",
+        name: "email",
+        widget: "string",
+        default: "",
+        required: false,
+        hint: 'Ex. george.washington@agency.gov',
+        }
+      - {
+        label: "504 contact phone number",
+        name: "phone",
+        widget: "string",
+        default: "",
+        required: false,
+        hint: 'Ex. (888) 888-8888',
+        }
+      - {
+        label: "General phone number",
+        name: "phone-g",
+        widget: "string",
+        default: "",
+        required: false,
+        hint: 'Ex. (888) 888-8888',
+        }
+      - {
+        label: "TTY",
+        name: "tty",
+        widget: "string",
+        default: "",
+        required: false,
+        hint: 'Ex. (888) 888-8888',
+        }
+      - {
+        label: "Fax",
+        name: "fax",
+        widget: "string",
+        default: "",
+        required: false,
+        hint: 'Ex. (888) 888-8888',
+        }
+      - {
+        label: "General Email address",
+        name: "email-g",
+        widget: "string",
+        default: "",
+        required: false,
+        hint: 'Ex. contact@agency.gov',
+        }
+      - {
+        label: "Website (504 specific URL)",
+        name: "website",
+        widget: "string",
+        default: "",
+        required: false,
+        hint: 'Ex. https://www.governmentagency.gov/504-policy',
+        }
+      - {
+        label: "Mailing address",
+        name: "address",
+        widget: "text",
+        default: "",
+        required: false,
+        }
+      - {
+        label: "Notes",
+        name: "notes",
+        widget: "text",
+        default: "",
+        required: false,
+        }
+  - label: Tags
+    name: tags
+    folder: _tags/
+    create: true
+    slug: "{{name}}"
+    editor:
+      preview: false
+    fields:
+      - {
+          label: "Name",
+          name: "name",
+          widget: "string",
+          hint: "The name of the tag",
+        }
+      - {
+          label: "Background color",
+          name: "color",
+          widget: "text",
+          required: false,
+          hint: "HTML hex color",
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: false,
+        }

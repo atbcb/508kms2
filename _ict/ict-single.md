@@ -778,7 +778,7 @@ Where the operable part is located beyond the leading edge of the maximum protru
 
 ![graphical representation of dimensions for obstructed forward reach]({{ site.baseurl }}/images/ict/407-8-3-2.PNG)
 
-**407.8.3.2.1 Operable Part Height for ICT with Obstructed Forward Reach**
+<div id="407.8.3.2.1" role="heading" aria-level="7" class="bold">407.8.3.2.1 Operable Part Height for ICT with Obstructed Forward Reach</div>
 
 The height of the operable part shall conform to Table 407.8.3.2.1.
 
@@ -804,7 +804,7 @@ The height of the operable part shall conform to Table 407.8.3.2.1.
 
 ![graphical representation of dimensions for operable part height for obstructed forward reach]({{ site.baseurl }}/images/ict/407-8-3-2-1.PNG)
 
-**407.8.3.2.2 Knee and Toe Space under ICT with Obstructed Forward Reach**
+<div id="407.8.3.2.2" role="heading" aria-level="7" class="bold">407.8.3.2.2 Knee and Toe Space under ICT with Obstructed Forward Reach</div>
 
 Knee and toe space under ICT shall be 27 inches (685 mm) high minimum, 25 inches (635 mm) deep maximum, and 30 inches (760 mm) wide minimum and shall be clear of obstructions.
 
