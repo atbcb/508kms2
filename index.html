@@ -1,7 +1,25 @@
 ---
 title: 508 Knowledge Management System
 layout: universal
+toc: /toc/508kms.html
+toc-group: ict
+image-directory: /images/ict
+right-sidenav: sidenav-right-kms.html
+ta-text: link to add stuff to KMS
 ---
-<h3>Welcome to the 508 ICT Knowledge Management System</h3>
+{% assign ict-chapters = site.ict | where: "title","ICT Single md" %}
+	{% for chapter in ict-chapters %}
+		<div class="font-body-md">{{chapter.content | markdownify}}</div>
+	{% endfor %}
 
-Please log in
+<hr>
+{% assign ict-chapters = site.ict | where: "title","Original 508 Standards (2000)" %}
+	{% for chapter in ict-chapters %}
+		<div class="font-body-md">{{chapter.content}}</div>
+	{% endfor %}
+
+<hr>
+{% assign ict-chapters = site.ict | where: "title","FAQs" %}
+	{% for chapter in ict-chapters %}
+		<div class="font-body-md">{{chapter.content | markdownify}}</div>
+	{% endfor %}
