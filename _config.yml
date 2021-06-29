@@ -76,6 +76,8 @@ collections:
   ict:
     output: true
     permalink: /:path/
+  kms:
+    output: false
 
 permalink: pretty
 
