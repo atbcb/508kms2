@@ -1,7 +1,7 @@
 ## Comment out when doing local development
 backend:
   name: github
-  repo: kengdoj/508kms2
+  repo: atbcb/508kms2
   base_url: https://federalistapp.18f.gov
   auth_endpoint: external/auth/github
   preview_context: federalist/build
@@ -29,9 +29,9 @@ logo_url: /images/usab-seal.png
 
 
 collections:
-  - label: News
-    name: posts
-    folder: news/_posts/
+  - label: KMS
+    name: kms
+    folder: _kms/
     create: true
     slug: "{{date}}-{{slug}}"
     editor:
