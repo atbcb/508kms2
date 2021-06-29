@@ -29,9 +29,9 @@ logo_url: /images/usab-seal.png
 
 
 collections:
-  - label: KMS
-    name: kms
-    folder: _kms/
+  - label: ICT KMS
+    name: ict-kms
+    folder: _kms/ict/
     create: true
     slug: "{{date}}-{{slug}}"
     editor:
@@ -85,9 +85,9 @@ collections:
         }
       - {label: "Featured News", name: "featured", widget: "boolean", default: false}
       - { label: "Body", name: "body", widget: "markdown" }
-  - label: Webinars
-    name: webinars
-    folder: webinars/_posts/
+  - label: ADA KMS
+    name: ada-kms
+    folder: _kms/ada/
     create: true
     slug: "{{date}}-{{slug}}"
     editor:
