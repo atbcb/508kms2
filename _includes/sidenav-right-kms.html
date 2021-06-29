@@ -24,16 +24,21 @@ ta-email-pre:
       <div class="margin-top-2 text-center">
         {% asset stock/question.svg class="maxh-15" alt="" %}
         
-        <div class="text-center">
-          <h4 class="padding-1 bg-base text-white">KMS Content Controls</h4>
-          <input type="checkbox" class="usa-checkbox__input" id="kmsinfo" name="toggle" value="shownotes" checked><label class="usa-checkbox__label" for="kmsinfo">Clarifications</label>
-          <input type="checkbox" class="usa-checkbox__input" id="508rm" name="rm" value="showrm" checked><label class="usa-checkbox__label" for="508rm">Future Rulemaking</label>
+        <div>
+          <fieldset>
+          <legend><h6 class="padding-1 bg-primary-darker text-white">KMS Controls</h6></legend>
+          <div class="text-left">
+          <input type="checkbox" class="usa-checkbox__input" id="prov" name="toggleprov" value="showprov" checked><label class="usa-checkbox__label" for="prov">Provisions</label>
+          <input type="checkbox" class="usa-checkbox__input" id="clari" name="toggleclari" value="showclari" checked><label class="usa-checkbox__label" for="clari">Clarifications</label>
+          <input type="checkbox" class="usa-checkbox__input" id="frm" name="togglefrm" value="showfrm" checked><label class="usa-checkbox__label" for="frm">Future Rulemaking</label>
+          </div>
          <!-- <br>
           <ul class="usa-list usa-list--unstyled padding-top-1 font-body-3xs">
           <li class="padding-bottom-0">800-872-2253 (v)</li>
           <li class="padding-bottom-0">800-993-2822 (tty)</li>
           <li class="padding-bottom-0"><a href="mailto:{{ page.ta-email-pre }}@access-board.gov">{{ page.ta-email-pre }}@access-board.gov</a></li>
           </ul> -->
+        </fieldset>
         </div>
 
       </div>
