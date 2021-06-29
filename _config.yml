@@ -32,8 +32,8 @@ primary_navigation:
     url: https://www.access-board.gov/ict/wcagtofpc.html
   - name: ICT Testing Baseline for Web
     url: https://federalist-7f6fa03b-6a44-4851-8922-ada666460e43.app.cloud.gov/site/section508coordinators/icttestingbaseline/
-  - name: Login
-    url: index.html
+  - name: Edit KMS
+    url: admin/#/collections/ict-kms
   #    - name: Americans with Disabilities Act
   #      url: https://www.access-board.gov/ada/
   #    - name: Architectural Barriers Act
