@@ -32,8 +32,8 @@ primary_navigation:
     url: https://www.access-board.gov/ict/wcagtofpc.html
   - name: ICT Testing Baseline for Web
     url: https://federalist-7f6fa03b-6a44-4851-8922-ada666460e43.app.cloud.gov/site/section508coordinators/icttestingbaseline/
-  - name: Login to Netlify
-    url: admin/
+  - name: Edit KMS
+    url: admin/#/collections/ict-kms
   #    - name: Americans with Disabilities Act
   #      url: https://www.access-board.gov/ada/
   #    - name: Architectural Barriers Act
@@ -65,11 +65,11 @@ primary_navigation:
 # 1. Create an account with Search.gov https://search.usa.gov/signup
 # 2. Add a new site.
 # 3. Add your site/affiliate name here.
-searchgov:
-  endpoint: https://search.usa.gov # You should not change this.
-  affiliate: usab # replace this with your search.gov account
-  access_key: 2ptOZyLyu778gjQEYJAYBc-0b0wXGJ8XylYt-LhPTXc= # this is usab API Access Key 2020-09-17
-  inline: true #this renders the results on the same domain. Otherwise, it will render the results in the search.gov domain
+# searchgov:
+#   endpoint: https://search.usa.gov # You should not change this.
+#   affiliate: usab # replace this with your search.gov account
+#   access_key: 2ptOZyLyu778gjQEYJAYBc-0b0wXGJ8XylYt-LhPTXc= # this is usab API Access Key 2020-09-17
+#   inline: true #this renders the results on the same domain. Otherwise, it will render the results in the search.gov domain
 
 collections:
   #baselines:
